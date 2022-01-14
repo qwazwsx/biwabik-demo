@@ -1,0 +1,389 @@
+/* GENERAL ################################################################## */
+:root {
+    --mdc-theme-primary: #00695c;
+    /*--mdc-theme-secondary: #ffd7c0;*/
+    --mdc-theme-secondary: #439889; /*fefaf5*/
+    --mdc-theme-background: orange;
+    /*--mdc-theme-surface: red;*/
+    --bg-color: #f3f3f3;
+    --mdc-ripple-color: white;
+    overflow-x: hidden;
+  }
+
+html, body {
+  height: 100%;
+  /* background-color: #92C83E; */
+}
+
+body {
+  font-family: 'Roboto';
+  margin: 0;
+  padding-top: 0.1px;
+  background-color: #f3f3f3;
+  overflow-x: hidden;
+  /* define scrollbar as an overlay, not taking up block space so that the content isnt pushed left when the scrollbar appears */
+  overflow: overlay;
+  overflow-x: hidden;
+}
+body {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+
+h1 {
+  color: var(--mdc-theme-primary);
+  font-weight: 100;
+  letter-spacing: 5px;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.center {
+  text-align: center;
+}
+
+/* hide x scroll bar in main panel */
+.mdc-drawer-app-content{
+  overflox-x:hidden !important;
+    /* move bar up because we changed around body's flex type to column */
+  /* padding-top: 45px !important; */
+}
+
+/* .class-title{
+  font-size: 1.2em;
+} */
+
+/* .class-percent{
+  font-size: 1.1em;
+  margin-bottom: 20px;
+} */
+
+
+.app-bar .title {
+	font-size: 1.4em;
+	margin: .67em 0;
+	/*color: var(--mdc-theme-primary);*/
+	font-weight: 100;
+	letter-spacing: 5px;
+  font-variant-ligatures: none;
+}
+
+
+.mdc-drawer-app-content {
+  flex: auto;
+  /* overflow: auto; */
+  position: relative;
+}
+.mdc-drawer .mdc-list-item--activated {
+  color: var(--mdc-theme-primary) !important;
+}
+
+.mdc-drawer .mdc-list-item{
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: black;
+}
+
+/* set icon color to black */
+.mdc-drawer .mdc-list-item i{
+  color: black;
+}
+
+
+.mdc-drawer .mdc-list .mdc-list-item__text.info {
+  margin-left: auto;
+  padding-right: 5%;
+  color: #767676;
+}
+
+
+/*.main-content {
+  overflow: auto;
+  height: 100%;
+}*/
+
+.header .person{
+  font-size: 1.6em;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+/* fix img process dialog bug */
+.img-process-dialog .mdc-dialog__content{
+  overflow-y: hidden;
+}
+
+.mdc-circular-progress{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.main-content{
+  overflow-x: hidden;
+}
+
+/* NEW MSG ################################################################## */
+
+/* fix weird line "bug" after moving from mdc v4 to v11 */
+.mdc-line-ripple::before, .mdc-line-ripple::after{
+  border-bottom-style: none !important;
+}
+
+
+
+/* SCREEN COMPONENT ######################################################### */
+.
+.fix-row{
+  display: inline-block;
+  position: relative;
+  bottom: 6px;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.hidden{
+  transform: scale(0);
+  opacity: 0;
+}
+
+
+/*disable table selection*/
+.mdc-data-table__row:not(.mdc-data-table__row--selected):hover{
+  background-color: inherit;
+}
+
+.app-bar {
+  position: fixed;
+}
+
+.mdc-top-app-bar {
+  z-index: 7;
+
+}
+
+.mdc-drawer {
+  /*width: 40%;*/
+  width: 350px;
+}
+
+/*bug fix for ghost highlight on tabbar*/
+.mdc-ripple-upgraded--background-focused:before{
+  opacity: 0 !important;
+}
+
+.mdc-icon.button.close {
+  transform: scale(.75);
+}
+
+.mdc-drawer__content .bottom{
+  position: absolute;
+  bottom: 0;
+}
+
+
+
+a {
+  color: grey;
+}
+
+/*fullscreen*/
+
+/*hide scrim*/
+body.fullscreen .mdc-drawer-scrim {
+  display:none;
+}
+/*hide navbar button*/
+body.fullscreen button.material-icons.mdc-top-app-bar__navigation-icon{
+  display:none;
+}
+/*push main content out of the drawer's way*/
+/* body.fullscreen .main-content {
+  padding-left: 350px;
+} */
+
+
+main#main-content {
+    padding-bottom: 25px;
+
+}
+
+/* file picker */
+.file-picker{
+  display:none;
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+  right:5px;
+  position:absolute;
+}
+
+::-webkit-scrollbar-track {/* color: red; */}
+
+::-webkit-scrollbar-thumb {
+  background: #e44141;
+  border-radius: 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main-reservation{
+  padding:10px;
+}
+
+.main-reservation .map-container{
+  width: 50%;
+  padding: 15px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.mobile .main-reservation .map-container{
+  width: 100%;
+}
+
+.main-reservation .map-container img.map{
+  border-radius: 10px;
+  transition: box-shadow .2s;
+  width: 100%;
+}
+
+.main-reservation pinch-zoom {
+  border-radius: 10px;
+}
+
+
+pinch-zoom > .moving {
+    transition: all .25s !important;
+}
+
+
+
+
+.pin-container{
+  width:100%;
+  height:100%;
+  position: absolute;
+  z-index: 99;
+}
+
+.pin-container .pin {
+  position: absolute;
+  width: 5%;
+  height: auto;
+  /* left: 8.4%;
+  top: 6.3%; */
+  user-select: none;
+}
+
+.pin-container .pin.disabled{
+  opacity: 0.3;
+}
+
+.pin-container .pin:hover {
+  transform:scale(1.1)
+}
+
+
+
+
+.main-reservation .filter {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.main-reservation .filter .inline{
+  display: inline-block;
+}
+
+.main-reservation .filter .no-top{
+      margin-top: 0;
+}
+
+.main-reservation .filter .date{
+  background: none;
+    border: none;
+    /* height: 108px; */
+    font-weight: bold;
+    color: #00695c;
+    font-size: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 185px;
+}
+
+
+
+
+
+
+.main-reservation .camp-list{
+  width: 30%;
+  height: 75%;
+  display: inline-block;
+  overflow: scroll;
+  position: absolute;
+  margin-left: 50px;
+  right: 10%;
+}
+
+body.mobile .main-reservation .camp-list{
+  width:100%;
+  /* height: 75%; */
+  display: block;
+  overflow: scroll;
+  position: unset;
+  margin-left: 0px;
+}
+
+
+.main-reservation .camp-list .item{margin-bottom: 10px;}
+
+.main-reservation .camp-list .item .site-number{
+  margin-top:0;
+}
+
+.main-reservation .camp-list .item .mdc-card__media{
+  background-image: url(https://biwabikcampground.com/wp-content/uploads/2018/03/lake3.1-scaled.jpg);
+}
+
+
+
+
+
+
+
+/*
+reservation container
+padding: 10px;
+
+
+mdc-card
+width: 50%;
+    padding: 10px;
+    border-radius: 10px;
+
+img
+    border-radius: 10px; */

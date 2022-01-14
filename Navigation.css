@@ -1,0 +1,105 @@
+/* center nav icon on top app bar */
+.mdc-top-app-bar__navigation-icon {
+  position: relative;
+  top: 32px;
+}
+
+/* ================================== */
+/* ===== TAB BAR ==================== */
+/* hide tab bar by default to prevent flashing on load */
+.mdc-tab-bar {
+  display: none
+}
+
+/* if we're on mobile, hide top bar */
+.fullscreen .mdc-tab-bar {
+  display: block;
+      padding-top: 1px;
+}
+
+/* non active tabs */
+.mdc-tab:not(.mdc-tab--active) {
+  background-color: var(--mdc-theme-primary);
+  --mdc-ripple-color: white;
+  /* transition: background-color .5s; */
+}
+
+/* active tabs */
+.mdc-tab.mdc-tab--active {
+  background-color: #f3f3f3;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* hide indicator line */
+.mdc-tab-indicator.mdc-tab-indicator--active {
+  opacity: 0;
+}
+
+/* change text color for non-active tabs */
+.mdc-tab:not(.mdc-tab--active) .mdc-tab__icon, .mdc-tab:not(.mdc-tab--active) .mdc-tab__text-label {
+  color: white;
+}
+
+/* add radius to non-active ripples */
+.mdc-tab__ripple {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* use flex (to support our .tab-background wrapper) */
+.mdc-tab-scroller__scroll-content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: start;
+  align-items: auto;
+  align-content: start
+}
+
+/* wrapper for .mdc-tabs so we can get the manila folder tab effect */
+.tab-background {
+  flex: 1 0 auto;
+  background-color: var(--mdc-theme-primary);
+  /* transition: border-bottom-left-radius .5s, border-bottom-right-radius .5s; */
+}
+
+/* TODO!!!!!!!!!! CLEAN THIS ANIMATION UP, REMOVE ANIM DELAYS AND TEST VARS AND SUCH */
+.mdc-tab {
+  width: 100%;
+  --border-anim-delay: 0s;
+  --border-anim-time: 0s;
+  --bg-color-time: 0s;
+  transition: background-color var(--bg-color-time),
+    border-top-left-radius var(--border-anim-time) var(--border-anim-delay),
+    border-top-right-radius var(--border-anim-time) var(--border-anim-delay);
+}
+
+/* left and right borders for manila folder tab effect */
+.left-border {
+  border-bottom-left-radius: 20px;
+  transition: border-bottom-left-radius .5s, background-color var(--bg-color-time),
+    border-top-left-radius var(--border-anim-time) var(--border-anim-delay),
+    border-top-right-radius var(--border-anim-time) var(--border-anim-delay);
+}
+
+.right-border {
+  border-bottom-right-radius: 20px;
+  transition: border-bottom-right-radius .5s, background-color var(--bg-color-time),
+    border-top-left-radius var(--border-anim-time) var(--border-anim-delay),
+    border-top-right-radius var(--border-anim-time) var(--border-anim-delay);
+}
+
+.tab-background.blank-bg {
+  background-color: #f3f3f3;
+}
+
+.is-animating{
+  position: relative;
+}
+
+/* ================================== */
+/* ===== LIST ======================= */
+.mdc-list-item--selected .material-icons, .mdc-list-item--selected .name {
+  color: var(--mdc-theme-primary) !important;
+}

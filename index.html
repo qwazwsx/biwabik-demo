@@ -1,0 +1,138 @@
+<body class="fullscreen">
+
+  <head>
+    <!-- <link href="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.js"></script> <!-- REMOVE MEEEEEEEEE -->
+
+    <title>Biwabik Campground</title>
+    <link href="material-components-web.min.css" rel="stylesheet">
+
+    <link href="mdc-list.css" rel="stylesheet">
+    <!-- <script src="https://unpkg.com/material-components-web@v11.0.0/dist/material-components-web.min.js"></script> <!-- REMOVE MEEEEEEEEE -->
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script> -->
+
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="suite.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script> -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+    <!-- <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js" integrity="sha256-xI/qyl9vpwWFOXz7+x/9WkG5j/SVnSw21viy8fWwbeE=" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js"></script> -->
+    <!-- <meta name="viewport" content="initial-scale=.5"> -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=.75">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+    </style>
+  </head>
+
+
+  <header class="mdc-top-app-bar app-bar" id="app-bar">
+    <div class="mdc-top-app-bar__row">
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+        <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button mdc-top-app-bar__action-item mdc-ripple-surface	">menu</button>
+        <span class="mdc-top-app-bar__title title">Biwabik Campground Conceptual Demo - Tony Zimbinski</span>
+      </section>
+    </div>
+  </header>
+
+  <main class="top-app-bar-content-container" style="position: absolute; top: 0px; width: 100%;">
+    <aside class="mdc-drawer mdc-drawer--modal">
+      <div class="mdc-drawer__content">
+        <ul class="mdc-list navigation-list" tabindex="0">
+          <!-- Nav list goes here -->
+        </ul>
+
+        <!-- <div class="bottom">
+          <button class="mdc-button logout">
+            <div class="mdc-button__ripple"></div>
+            <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_back</i>
+            <span class="mdc-button__label">logout</span>
+          </button>
+          <button class="mdc-button info">
+            <div class="mdc-button__ripple"></div>
+            <i class="material-icons mdc-button__icon" aria-hidden="true">bolt</i>
+            <span class="mdc-button__label">Options</span>
+          </button>
+        </div> -->
+      </div>
+    </aside>
+
+    <div class="mdc-drawer-scrim"></div>
+    <div class="mdc-drawer-app-content ">
+      <main class="main-content" id="main-content">
+        <div id="tab-bar"></div>
+        <!-- main app content goes here -->
+
+        <div class="tab-content">
+          <div class="main-reservation">
+
+            <div class="filter">
+              <h1 class="inline">I want to make a reservation from</h1>
+              <input class="inline date" type="date" />
+              <h1 class="inline no-top">to </h1>
+              <input class="inline date" type="date" />
+            </div>
+
+
+
+
+            <div class="map-container mdc-card mdc-card--outlined">
+              <pinch-zoom class="mdc-elevation--z1">
+                <div>
+                  <div class="pin-container">
+                    <!--pins go here!-->
+                  </div>
+                  <img src="imgs/map.png" class="map" /> <!-- mdc-elevation--z1 -->
+                </div>
+              </pinch-zoom>
+            </div>
+
+            <div class="camp-list">
+
+            </div>
+
+
+
+
+
+
+
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <div id="test2" style="position:absolute; display:none;left:60%;text-align:center;">This page will link to the printable .PDF map that is currently on the campground website.</div>
+        <div id="test3" style="position:absolute; display:none;left:60%;text-align:center;">This page can be used to list the rules. Alternatively, this tab could be used to purchase firewood or off season storage.</div>
+        <div id="test4" style="position:absolute; display:none;left:60%;text-align:center;">
+          <h1>Tony Zimbinski</h1>
+          <p>
+            Contact Me @ 952.303.1347
+          </p>
+
+        </div>
+
+      </main>
+    </div>
+
+  </main>
+
+
+
+
+
+
+
+
+  <script src="bundle.js"></script>
+</body>
