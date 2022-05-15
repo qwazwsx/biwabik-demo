@@ -5,7 +5,7 @@
 
 [view the demo here](https://qwazwsx.xyz/biwabik-demo/)
 
-A quick project proposal for the city of Biwabik's campground site
+A quick 3 hour project proposal for the city of Biwabik's campground site
 
 Built in Typescript + Google Material Design Library
 
